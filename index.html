@@ -5,19 +5,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Video Content App</title>
   <style>
+    /* Reset basic styles */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      margin: 0;
-      padding: 0;
-      background-color: #f0f2f5;
+      line-height: 1.6;
+      background-color: #f5f6fa;
       color: #333;
     }
+
+    /* Header */
     header {
-      background-color: #ff5722;
+      background: linear-gradient(135deg, #ff5722, #ff8a50);
       color: white;
-      padding: 20px 0;
       text-align: center;
+      padding: 60px 20px;
     }
+    header h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    /* Navigation */
     nav {
       display: flex;
       justify-content: center;
@@ -26,83 +41,149 @@
     nav a {
       color: white;
       text-decoration: none;
-      padding: 15px 20px;
-      display: block;
+      padding: 15px 25px;
+      font-weight: bold;
+      transition: background 0.3s;
     }
     nav a:hover {
       background-color: #444;
     }
+
+    /* Main Sections */
     main {
       max-width: 1000px;
-      margin: 30px auto;
+      margin: 40px auto;
       padding: 20px;
-      background-color: white;
-      border-radius: 10px;
-      box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #ff5722;
-      margin-bottom: 20px;
     }
     section {
-      margin-bottom: 25px;
+      margin-bottom: 50px;
+    }
+    h2 {
+      color: #ff5722;
+      margin-bottom: 15px;
+      font-size: 2em;
     }
     p {
-      line-height: 1.7;
       margin-bottom: 15px;
     }
+    ul {
+      list-style-type: disc;
+      padding-left: 20px;
+      margin-bottom: 15px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-block;
+      padding: 12px 25px;
+      background-color: #ff5722;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background 0.3s;
+      font-weight: bold;
+    }
+    .btn:hover {
+      background-color: #ff784e;
+    }
+
+    /* Features Cards */
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background-color: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .card h3 {
+      color: #ff5722;
+      margin-bottom: 10px;
+    }
+
+    /* Footer */
     footer {
       text-align: center;
-      padding: 15px;
+      padding: 25px;
       background-color: #333;
       color: white;
-      margin-top: 30px;
     }
-    a.contact {
-      color: #ff5722;
-      text-decoration: none;
-    }
-    a.contact:hover {
-      text-decoration: underline;
+
+    /* Responsive Images */
+    img {
+      max-width: 100%;
+      border-radius: 10px;
     }
   </style>
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <h1>Video Content App</h1>
+    <p>Manage, schedule, and track your video content seamlessly across multiple platforms with our all-in-one solution.</p>
+    <a href="#contact" class="btn">Get in Touch</a>
   </header>
 
+  <!-- Navigation -->
   <nav>
     <a href="#about">About</a>
     <a href="#features">Features</a>
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- Main Content -->
   <main>
+    <!-- About Section -->
     <section id="about">
       <h2>About the App</h2>
-      <p>Our platform helps users manage, organize, and schedule their video content efficiently across multiple platforms. Whether you're a content creator or a business, we provide tools to streamline your workflow and track engagement easily.</p>
+      <p>Video Content App is designed to simplify content management for creators and businesses alike. Organize your videos, plan your schedule, and monitor engagement metrics all in one place.</p>
+      <img src="https://via.placeholder.com/900x400?text=Video+Content+Dashboard" alt="Video Dashboard">
     </section>
 
+    <!-- Features Section -->
     <section id="features">
       <h2>Key Features</h2>
-      <ul>
-        <li>Connect multiple media platforms</li>
-        <li>Schedule and manage uploads</li>
-        <li>Track engagement and performance</li>
-        <li>Secure and reliable integration</li>
-      </ul>
+      <div class="features">
+        <div class="card">
+          <h3>Multi-Platform Integration</h3>
+          <p>Connect and manage all your video platforms from one central dashboard.</p>
+        </div>
+        <div class="card">
+          <h3>Schedule & Automate</h3>
+          <p>Plan and automate video uploads to maintain a consistent publishing schedule.</p>
+        </div>
+        <div class="card">
+          <h3>Analytics & Insights</h3>
+          <p>Track engagement, performance, and audience behavior to optimize your content.</p>
+        </div>
+        <div class="card">
+          <h3>Secure & Reliable</h3>
+          <p>Our platform ensures your content is safe with industry-standard security measures.</p>
+        </div>
+      </div>
     </section>
 
+    <!-- Contact Section -->
     <section id="contact">
       <h2>Contact Us</h2>
-      <p>For any inquiries or support, reach out via email: <a class="contact" href="mailto:contact@example.com">contact@example.com</a></p>
+      <p>If you have any questions or need support, reach out to us:</p>
+      <p>Email: <a href="mailto:contact@example.com" class="btn">contact@example.com</a></p>
     </section>
   </main>
 
+  <!-- Footer -->
   <footer>
     &copy; 2025 Video Content App. All rights reserved.
   </footer>
+
 </body>
 </html>
